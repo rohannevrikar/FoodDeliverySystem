@@ -13,9 +13,8 @@ namespace Ordering.Service
         private readonly IOrderRepository _orderRepository;
 
         public OrderService(IOrderRepository orderRepository)
-        {
-            
-            _orderRepository = orderRepository;
+        {            
+            _orderRepository = orderRepository;            
         }
         public async Task<Order> AddNewOrder(Order order)
         {

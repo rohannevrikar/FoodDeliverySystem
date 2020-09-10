@@ -28,11 +28,14 @@ namespace Ordering.API.Controllers
         {            
             return JsonConvert.SerializeObject(await _orderService.AddNewOrder(order));
         }
+
         [Route("{orderId:Guid}")]
         [HttpGet]
         public async Task<string> GetOrder(string orderId)
         {
             return JsonConvert.SerializeObject(await _orderService.GetOrderById(orderId));
         }
+
+       
     }
 }
